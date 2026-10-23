@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f766e"><title>لوازم‌التحریر احمد</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <button class="brand" id="brandMark" aria-label="لوازم التحریر احمد">
+    <span class="brand-icon">✎</span><span><b id="brandName">لوازم‌التحریر احمد</b><small>نوشت‌افزار، ایده‌های بزرگ</small></span>
+  </button>
+  <nav><a href="#products">محصولات</a><a href="#how">راهنمای خرید</a><a href="#contact">تماس با ما</a></nav>
+  <button class="cart-button" id="cartOpen">سبد خرید <span id="cartCount">۰</span></button>
+</header>
+<section class="hero">
+  <div class="hero-copy"><span class="eyebrow">شروعی رنگی برای ایده‌های تازه</span><h1>همه‌چیز برای<br><em>نوشتن و ساختن</em></h1>
+    <p>لوازم‌التحریر مورد علاقه‌ات را انتخاب کن؛ سفارش را آنلاین ثبت کن و رسید پرداخت را بفرست.</p>
+    <a class="primary" href="#products">دیدن محصولات <span>←</span></a>
+  </div>
+  <div class="hero-art"><div class="blob"></div><div class="pencil">✏️</div><div class="note note-a">ایده‌های<br>بزرگ!</div><div class="note note-b">✦ رنگی فکر کن ✦</div><div class="circle">AHMAD<br>STATIONERY</div></div>
+</section>
+<section class="banner-wrap"><div class="banner" id="banner"><div><span class="banner-tag">پیشنهاد ویژه</span><h2 id="bannerTitle">برای شروعی پر از رنگ آماده‌ای؟</h2><p id="bannerText">محصولات کاربردی و دوست‌داشتنی را کشف کن.</p></div><a href="#products">خرید کن ←</a><div class="banner-dots" id="bannerDots"></div></div></section>
+<main>
+  <section class="section-head" id="products"><div><span class="eyebrow">ویترین فروشگاه</span><h2>محصولات منتخب</h2><p>محصول دلخواهت را به سبد خرید اضافه کن.</p></div><div class="filters"><input id="search" placeholder="جست‌وجوی محصول..." aria-label="جست‌وجوی محصول"><select id="category"><option value="همه">همه دسته‌ها</option><option>خودکار و مداد</option><option>دفتر و کاغذ</option><option>رنگ‌آمیزی</option><option>ابزار و لوازم</option></select></div></section>
+  <div class="product-grid" id="productGrid"></div>
+  <section class="how" id="how"><div class="how-icon">📦</div><div><span class="eyebrow">خرید آسان</span><h2>از انتخاب تا تحویل، ساده و روشن</h2><p>محصولات را انتخاب کن، اطلاعات سفارش را وارد کن و رسید پرداخت را بارگذاری کن. سفارش با وضعیت «در حال بررسی توسط پشتیبانان» ثبت می‌شود.</p></div><div class="shipping"><span>هزینه ارسال ثابت</span><strong>۱۵۰٬۰۰۰ <small>تومان</small></strong></div></section>
+</main>
+<footer id="contact"><div class="footer-brand"><span class="brand-icon">✎</span><b id="footerName">لوازم‌التحریر احمد</b><p>ابزار کوچک، خیال‌های بزرگ.</p></div><div><b>ارتباط با ما</b><p>تلفن: <a id="phoneLink" href="tel:09339953683">۰۹۳۳۹۹۵۳۶۸۳</a></p><p>پاسخ‌گوی شما هستیم.</p></div><div><b>روش پرداخت</b><p>پس از واریز، تصویر رسید را در فرم سفارش بارگذاری کنید.</p><small id="footerCopyright">© لوازم‌التحریر احمد</small></div></footer>
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="cartDrawer"><div class="drawer-head"><h2>سبد خرید</h2><button class="icon-btn" data-close>×</button></div><div id="cartItems"></div><div class="cart-total" id="cartTotal"></div><button class="primary full" id="checkoutOpen">ثبت سفارش و پرداخت</button></aside>
+<section class="modal" id="checkoutModal"><button class="modal-close" data-close>×</button><h2>تکمیل سفارش</h2><p class="muted">لطفاً اطلاعات تماس و رسید پرداخت را وارد کنید.</p><form id="checkoutForm"><label>نام و نام خانوادگی<input name="customer" required></label><label>شماره تماس<input name="phone" inputmode="tel" required></label><label>نشانی کامل<textarea name="address" rows="2" required></textarea></label><div class="payment-card"><span>واریز به کارت</span><strong id="cardNumber">۶۲۱۹۸۶۱۸۶۴۴۶۱۶۵۱</strong><b id="cardHolder">ناصر عبیداوی</b><button type="button" class="text-btn" id="copyCard">کپی شماره کارت</button></div><label>تصویر رسید پرداخت<input type="file" name="receipt" accept="image/*,.pdf" required></label><p class="hint">هزینه ارسال: <b>۱۵۰٬۰۰۰ تومان</b> — رسید فقط در این نسخه نمایشی در مرورگر نگهداری می‌شود.</p><button class="primary full" type="submit">ثبت سفارش</button></form></section>
+<section class="modal" id="authModal"><button class="modal-close" data-close>×</button><h2 id="authTitle">ورود / ایجاد حساب</h2><p class="muted">برای ثبت سفارش، حساب کاربری بسازید یا وارد شوید.</p><form id="authForm"><label>نام کاربری<input name="username" required autocomplete="username"></label><label>رمز عبور<input name="password" type="password" required minlength="6" autocomplete="current-password"></label><label id="authNameWrap">نام نمایشی<input name="displayName"></label><button class="primary full" type="submit">ورود / ایجاد حساب</button><button class="text-btn" type="button" id="authToggle">تغییر به ورود</button></form></section>
+<section class="modal admin-modal" id="adminModal"><button class="modal-close" data-close>×</button><div class="admin-title"><span class="eyebrow">مدیریت فروشگاه</span><h2>پنل مدیریت</h2></div><div id="adminLogin"><p class="muted">برای ورود، حساب مدیر بسازید یا وارد شوید. در نسخه نمایشی، احراز هویت فقط روی همین مرورگر است.</p><form id="adminAuthForm"><label>نام کاربری مدیر<input name="username" required></label><label>رمز عبور<input name="password" type="password" required minlength="6"></label><button class="primary full" type="submit">ورود / ایجاد مدیر</button></form></div>
+<div id="adminPanel" hidden><div class="admin-tabs"><button class="tab active" data-tab="settings">تنظیمات</button><button class="tab" data-tab="productsAdmin">محصولات</button><button class="tab" data-tab="bannersAdmin">بنرها</button><button class="tab" data-tab="ordersAdmin">سفارش‌ها</button></div>
+<div class="admin-page" id="settings"><h3>ویرایش ظاهر و اطلاعات</h3><form id="settingsForm" class="admin-form"><label>نام فروشگاه<input name="storeName"></label><label>شماره تماس<input name="phone"></label><label>شماره کارت<input name="cardNumber"></label><label>نام صاحب کارت<input name="cardHolder"></label><label>هزینه ارسال (تومان)<input name="shipping" type="number" min="0"></label><label>متن اصلی بنر<input name="bannerTitle"></label><label>متن توضیح بنر<input name="bannerText"></label><label>متن معرفی صفحه<textarea name="intro"></textarea></label><button class="primary" type="submit">ذخیره تنظیمات</button></form></div>
+<div class="admin-page" id="productsAdmin" hidden><h3>افزودن محصول</h3><form id="productForm" class="admin-form"><label>نام محصول<input name="name" required></label><label>قیمت (تومان)<input name="price" type="number" min="0" required></label><label>دسته‌بندی<select name="category"><option>خودکار و مداد</option><option>دفتر و کاغذ</option><option>رنگ‌آمیزی</option><option>ابزار و لوازم</option></select></label><label>توضیح کوتاه<input name="description"></label><label>تصویر محصول<input name="image" type="file" accept="image/*"></label><button class="primary" type="submit">افزودن محصول</button></form><p class="hint">برای انتشار واقعی تصویر در پوشه pictures گیت‌هاب، به بک‌اند امن یا GitHub App نیاز است؛ این نسخه تصویر را فقط محلی نگه می‌دارد.</p><div id="adminProductList"></div></div>
+<div class="admin-page" id="bannersAdmin" hidden><h3>مدیریت بنرهای چرخشی</h3><form id="bannerForm" class="admin-form"><label>عنوان بنر<input name="title" required></label><label>متن بنر<input name="text"></label><label>رنگ پس‌زمینه<input name="color" type="color" value="#dff6ef"></label><button class="primary" type="submit">افزودن بنر</button></form><p class="hint">هر بنر به‌صورت خودکار هر ۵ ثانیه نمایش داده می‌شود.</p><div id="adminBannerList"></div></div>
+<div class="admin-page" id="ordersAdmin" hidden><h3>سفارش‌های ثبت‌شده</h3><div id="adminOrdersList"></div></div>
+<button class="text-btn" id="adminLogout">خروج از پنل مدیریت</button></div></section>
+<div class="toast" id="toast" role="status"></div>
+<script src="app.js"></script>
+</body></html>
